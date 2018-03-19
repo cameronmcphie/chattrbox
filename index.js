@@ -3,8 +3,11 @@ var fs = require("fs");
 var extract = require("./extract");
 
 var handleError = function (err, res) {
-  res.writeHead(404);
-  res.end();
+  fs.readFile("app/error.html", "utf-8", function(err, page) {
+    res.writeHead(404, {"Content-Type": "text/html"});
+    res.write(page);
+    res.end();
+  });
 };
 
 var server = http.createServer(function(req, res) {
@@ -16,6 +19,7 @@ var server = http.createServer(function(req, res) {
       handleError(err, res);
       return;
     } else {
+      res.setHeader("Content-Type", "text/html");
       res.end(data);
     }
   });
