@@ -1,9 +1,12 @@
 module.exports = {
   "env": {
-    "browser": true
+    "browser": true,
+    "amd": true
   },
-  "extends": "eslint:recommended",
+  "plugins": ["node"],
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
   "rules": {
+    "node/exports-style": ["error", "module.exports"],
     "no-console": 0,
     "indent": [
       "error",

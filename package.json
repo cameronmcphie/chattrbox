@@ -5,9 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "mime": "^2.2.0",
-    "self-update": "^0.0.1"
+    "self-update": "^0.0.1",
+    "ws": "^5.1.0"
   },
   "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-plugin-node": "^6.0.1",
     "nodemon": "^1.17.2"
   },
   "scripts": {
