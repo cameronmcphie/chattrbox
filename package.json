@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "mime": "^2.2.0",
     "self-update": "^0.0.1"
   },
   "devDependencies": {
